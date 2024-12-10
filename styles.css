@@ -1,0 +1,346 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+.navbar img {
+    height: 40px; 
+    margin-right: 10px; 
+}
+.navbar .logo-text {
+    color: white;
+    font-size: 24px; 
+    font-weight: bold; 
+    margin-right:20px;
+}
+
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+    padding: 10px 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display:flex;
+}
+
+.navbar-right{
+ padding-left: 20%;   
+}
+.navbar a {
+    color: white;
+    text-align: center;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #377bfa;
+    color: white;
+    border-radius: 4px;
+    transform: translateY(-3px);
+}
+
+.navbar .search-container {
+    float: right;
+    display: flex;
+    align-items: center;
+}
+
+.navbar input[type="text"] {
+    padding: 6px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 4px;
+    transition: border 0.3s ease;
+}
+
+.navbar input[type="text"]:focus {
+    border: 2px solid #4CAF50;
+}
+
+.navbar button {
+    padding: 6px 10px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar button:hover {
+    background-color: #d32f2f;
+    transform: scale(1.1);
+}
+
+/* Sidebar menu styling */
+.menu {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 10px 0;
+}
+
+.menu a {
+    background-color: #4CAF50;
+    padding: 12px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.menu a:hover {
+    background-color: #45a049;
+}
+
+.container {
+    padding: 20px;
+    text-align: center;
+}
+
+.video-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.video-box {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 350px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.video-box iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 8px;
+}
+
+.video-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
+
+.video-description {
+    font-size: 14px;
+    color: #555;
+    margin-top: 10px;
+}
+
+.video-upload-date {
+    font-size: 12px;
+    color: #888;
+    margin-top: 10px;
+}
+
+.video-user {
+    font-size: 14px;
+    color: #333;
+    margin-top: 5px;
+}
+
+.like-btn {
+    padding: 8px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.like-btn:hover {
+    background-color: #45a049;
+}
+
+.like-count {
+    font-size: 14px;
+    margin-left: 8px;
+}
+
+.comments-section {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.comment-box {
+    padding: 8px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+}
+
+.comment-box p {
+    margin: 0;
+    font-size: 12px;
+    color: #555;
+}
+
+.comment-box p strong {
+    color: #333;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.comment-box p em {
+    font-size: 10px;
+    color: #888;
+    margin-top: 3px;
+}
+
+.comment-btn {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.comment-btn:hover {
+    background-color: #45a049;
+}
+
+textarea {
+    width: 90%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    color: #333;
+    resize: vertical;
+}
+
+/* Optional: Add responsiveness */
+@media (max-width: 768px) {
+    .video-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .comments-section {
+        max-width: 100%;
+        padding: 10px;
+    }
+}
+
+.search-bar {
+    padding: 8px;
+    width: 250px;
+    border: none;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+/* Style for the 'Video not found' message */
+.video-not-found {
+    font-size: 20px;
+    font-weight: bold;
+    color: #FF6347;
+    margin-top: 20px;
+    text-align: center;
+    padding: 20px;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Search Button Style */
+.search-bar {
+    padding: 8px 10px;
+    font-size: 14px;
+    margin-right: 10px;
+    border-radius: 4px;
+    border: none;
+}
+
+.searching-btn {
+    padding: 8px 15px;
+    background-color: #4379c0;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.search-btn:hover {
+    background-color: #45a049;
+}
+
+/* Logout Button Style */
+.logout-btn {
+    padding: 8px 15px;
+    background-color: #3672f4;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 14px;
+}
+
+.logout-btn:hover {
+    background-color: #3573e5;
+}
+
+/* Light blue button styles for the Like and Comment buttons */
+.like-btn, .comment-btn {
+    background-color: #3573e5; 
+    color: white;             
+    border: 1px solid #3573e5; 
+    padding: 10px 20px;       
+    font-size: 16px;           
+    border-radius: 5px;       
+    cursor: pointer;         
+    transition: background-color 0.3s, border-color 0.3s; 
+}
+
+/* Hover effect for light blue buttons */
+.like-btn:hover, .comment-btn:hover {
+    background-color: #377bfa; 
+    border-color: #377bfa;     
+}

@@ -1,0 +1,67 @@
+/* Center the form */
+body, html {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6;
+}
+
+.container {
+    width: 350px;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.container h2 {
+    font-size: 24px;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.container p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.container input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+}
+
+.container button {
+    width: 48%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.verify-btn {
+    background-color: #007bff;
+    color: white;
+    margin-right: 2%;
+}
+
+.resend-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+.container a {
+    display: block;
+    margin-top: 1rem;
+    color: #007bff;
+    text-decoration: none;
+}
