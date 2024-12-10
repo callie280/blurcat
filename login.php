@@ -22,12 +22,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $user = $result->fetch_assoc();
         if (password_verify($password, $user['password'])) {
             $_SESSION['user_id'] = $user['id'];
-            header("Location: welcome.php");
+            header("Location: welcome.html");
         } else {
-            header('Location: index.php?error=Invalid username or password');
+            header('Location: index.html?error=Invalid username or password');
         }
     } else {
-        header('Location: index.php?error=Invalid username or password');
+        header('Location: index.html?error=Invalid username or password');
     }
 }
 
