@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="icon" href="resources/BlurCut.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Add your CSS here */
+    </style>
+</head>
+<body>
+
+    <!-- Navbar Section -->
+    <div class="navbar">
+        <div class="navbar-left">
+            <img src="resources/BlurCut.png" alt="Logo"> 
+            <a href="welcome.php">Home</a>
+            <a href="videoContentArea.php">Video Content Area</a>
+            <a href="aboutUs.php">About Us</a>
+            <a href="explore_videos.php">Explore</a>
+        </div>
+        <div class="navbar-right">
+            <form method="POST" style="display: inline-block;">
+                <input type="text" name="search_term" class="search-bar" placeholder="Search videos..." value="<?php echo isset($_POST['search_term']) ? htmlspecialchars($_POST['search_term']) : ''; ?>">
+                <button type="submit" name="search" class="search-btn">Search</button>
+            </form>
+            <a href="logout.php" class="logout-btn">Logout (<?php echo htmlspecialchars($userName); ?>)</a>
+        </div>
+    </div>
+
+    <!-- Welcome Section -->
+    <div class="welcome-container">
+        <h2>Hi, <?php echo htmlspecialchars($user['username']); ?>!</h2>
+        <h1>Welcome to BlurCut Real-Time Recording!</h1>
+        <p>Auto-blur unwanted faces while recording live.</p>
+        <a href="video_recording.php" class="btn-primary">Start Recording</a>
+    </div>
+
+    <!-- Feature Section -->
+    <div class="feature-container">
+        <div class="feature-box">
+            <img src="resources/camera.png" alt="Detect Faces">
+            <h1>Detect Faces</h1>
+            <h3>Our AI-powered tool detects faces in real-time during your live streams.</h3>
+        </div>
+        <div class="feature-box">
+            <img src="resources/blurface.png" alt="Blur Faces">
+            <h1>Blur Faces</h1>
+            <h3>Automatically blur unwanted faces to protect privacy.</h3>
+        </div>
+        <div class="feature-box">
+            <img src="resources/stream.png" alt="Live Stream">
+            <h1>Live Stream</h1>
+            <h3>Continue live streaming while protecting the privacy of others.</h3>
+        </div>
+    </div>
+
+    <!-- Modal for Configuration -->
+    <div id="configModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Auto-Blurring Configuration</h2>
+            <div class="slider-container">
+                <label for="bg-blur">Background Blur Amount</label>
+                <div class="slider-wrapper">
+                    <input type="range" id="bg-blur" name="bg-blur" min="0" max="100" value="50">
+                    <span class="value-display" id="bg-blur-value">50</span>
+                </div>
+            </div>
+            <div class="slider-container">
+                <label for="face-blur">Face Blur Amount</label>
+                <div class="slider-wrapper">
+                    <input type="range" id="face-blur" name="face-blur" min="0" max="100" value="20">
+                    <span class="value-display" id="face-blur-value">20</span>
+                </div>
+            </div>
+            <button id="saveSettingsBtn" class="save-btn">Save Settings</button>
+        </div>
+    </div>
+
+    <script>
+        // Add JavaScript code here
+    </script>
+</body>
+</html>
